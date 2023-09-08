@@ -30,7 +30,7 @@ app.use(express.urlencoded({extended:true}))
 app.set("view engine", "ejs");
 app.use('/static', express.static('static'));
 app.use('/public', express.static('public'))
-
+//1
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
