@@ -31,6 +31,14 @@ app.set("view engine", "ejs");
 app.use('/static', express.static('static'));
 app.use('/public', express.static('public'))
 
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; connect-src 'self' http://localhost:8080;"
+  );
+  next();
+});
+
 app.use(session({
   secret: process.env.KEY, // 세션을 암호화할 때 사용할 비밀 키
   resave: false,
