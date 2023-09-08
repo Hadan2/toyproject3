@@ -38,7 +38,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-
+console.log("to confirm")
 app.use(session({
   secret: process.env.KEY, // 세션을 암호화할 때 사용할 비밀 키
   resave: false,
