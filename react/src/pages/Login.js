@@ -113,7 +113,7 @@ function ModalRegister(props){
               alert('아이디 혹은 비밀번호를 올바르게 입력해주세요')
             }
             
-          }}> 회원가입 </button>
+          }}> 회원가입! </button>
 
 
         
@@ -175,7 +175,7 @@ function ModalRegister(props){
                     alert('fail')
                 }
             })
-            }}> 로그인 </button>
+            }}> 로그인! </button>
   
   
           
