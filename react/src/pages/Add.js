@@ -52,7 +52,7 @@ function Add(props) {
                         <Button className="add-button" style={{marginTop:20, color: "Dark"}} 
                         onClick={() => {
                             if(isDate(date)&&isTitle(title)) {
-                              axios.post('http://localhost:8080/data2', {
+                              axios.post('/data2', {
                                 title : title,
                                 content : content,
                                 date : date,

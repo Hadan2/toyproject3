@@ -10,7 +10,7 @@ function Home(props) {
     const params = useParams();
 
     const fetchData = () => {
-      axios.get('http://localhost:8080/data2') 
+      axios.get('/data2') 
           .then(res => {
             let copy = [...res.data]
             props.setData1(copy);
@@ -23,7 +23,7 @@ function Home(props) {
 
     const handleComplete = (id) => {
         console.log('버튼 눌렀네요')
-        axios.post(`http://localhost:8080/modify/${id}`, {
+        axios.post(`/modify/${id}`, {
             user: props.user
           })
           .then((response) => {
@@ -39,7 +39,7 @@ function Home(props) {
       };
 
       const handleDelete = (id,i) => {
-        axios.delete(`http://localhost:8080/delete/${id}`,{
+        axios.delete(`/delete/${id}`,{
             data: {
                 user:props.user
               }

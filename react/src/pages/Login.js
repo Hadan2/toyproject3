@@ -94,7 +94,7 @@ function ModalRegister(props){
             //console.log(props.id)
             //console.log(props.pwd)
             if(isId(props.id)&&isPassword(props.pwd)) {
-              axios.post('http://localhost:8080/info', {
+              axios.post('/info', {
                 id : props.id,
                 pwd : props.pwd
             })
@@ -160,7 +160,7 @@ function ModalRegister(props){
             <button onClick={() => {
               console.log(props.id)
               console.log(props.pwd)
-              axios.post('http://localhost:8080/loginServer', {
+              axios.post('/loginServer', {
                   id : props.id,
                   pwd : props.pwd
               })

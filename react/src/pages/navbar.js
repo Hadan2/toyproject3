@@ -28,7 +28,7 @@ function MyNavbar() {
                         <Col xs="auto">
                             <Button variant="contained" color="primary" className="textst"
                                 onClick={() => {
-                                    axios.get('http://localhost:8080/logout')
+                                    axios.get('/logout')
                                     .then(res => {
                                         alert('Logout!')
                                         sessionStorage.clear();

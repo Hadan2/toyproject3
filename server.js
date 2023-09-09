@@ -52,7 +52,7 @@ MongoClient.connect(process.env.DB_URL,{ useUnifiedTopology: true } , function(e
 
     db = client.db('toyproject');
 
-    app.listen(8080, function() {
+    app.listen(process.env.PORT, function() {
         console.log('listening on 8080')
     })
         
